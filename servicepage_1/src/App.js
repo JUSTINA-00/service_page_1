@@ -1,13 +1,30 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
 import services from './data';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 50px; /* Space between cards */
+  justify-content: center; /* Center the grid items horizontally */
+  box-sizing: border-box;
+`;
+
+const Title = styled.h1`
+  font-size: 3rem; /* Corrected font size */
+  color: #333;
+  margin: 20px 0;
+  margin-left: 23px;
+  font-weight: bold;
+`;
 
 const App = () => {
   return (
-    <div style={{ padding: '20px', textAlign: 'center' }}>
-      <h1>Hey!</h1>
-      {/* Corrected the structure here */}
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+    <div>
+      <Title>Hey!</Title>
+      <Container>
         {services.map((service) => (
           <ServiceCard
             key={service.id}
@@ -16,7 +33,7 @@ const App = () => {
             description={service.description}
           />
         ))}
-      </div>
+      </Container>
     </div>
   );
 };
