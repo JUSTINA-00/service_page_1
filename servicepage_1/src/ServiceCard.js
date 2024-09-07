@@ -33,7 +33,7 @@ const Info = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: #dda15e;
   transition: height 0.3s ease, opacity 0.3s ease;
   display: flex;
   flex-direction: column;

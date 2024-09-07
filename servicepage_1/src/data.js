@@ -1,31 +1,29 @@
-import aaaImage from './pics/aaa.png';
-import aabImage from './pics/aab.png';
-import aacImage from './pics/aac.png';
-import aadImage from './pics/aad.png';
+import projectimage from './pics/image.png';
+
 
 const services = [
     {
       id: 1,
       title: "Service 1",
-      image: aaaImage,
+      image: projectimage,
       description: "This is the description for project 1. ",
     },
     {
       id: 2,
       title: "Service 2",
-      image: aabImage,
+      image: projectimage,
       description: "This is the description for project 2.",
     },
     {
       id: 3,
       title: "Service 3",
-      image: aacImage,
+      image: projectimage,
       description: "This is the description for project 2.",
     },
     {
       id: 4,
       title: "Service 4",
-      image: aadImage,
+      image: projectimage,
       description: "This is the description for project 2.",
     },
     // Add more projects as needed

@@ -2,6 +2,8 @@ import React from 'react';
 import ServiceCard from './ServiceCard';
 import services from './data';
 import styled from 'styled-components';
+import MessageBox from './MessageBox';
+
 
 const Container = styled.div`
   padding: 50px;
@@ -12,18 +14,27 @@ const Container = styled.div`
   box-sizing: border-box;
 `;
 
+
 const Title = styled.h1`
-  font-size: 3rem; /* Corrected font size */
-  color: #333;
-  margin: 20px 0;
+  font-size: 5rem; /* Corrected font size */
+  font-family: 'Impact', sans-serif;
+  font-weight: normal; /* Impact is inherently bold */
+  color: #78290f;
+  padding: 20px;
+  margin: 0px ;
   margin-left: 23px;
-  font-weight: bold;
+  font-weight: normal;
 `;
 
+const PageWrapper = styled.div`
+  background-color: #fefae0; /* Change color as needed */
+  min-height: 100vh; /* Ensure full height */
+`;
 const App = () => {
   return (
-    <div>
-      <Title>Hey!</Title>
+    <div >
+      <PageWrapper>
+      <Title>Heading!</Title>
       <Container>
         {services.map((service) => (
           <ServiceCard
@@ -34,7 +45,10 @@ const App = () => {
           />
         ))}
       </Container>
+      </PageWrapper>
+      <MessageBox />
     </div>
+    
   );
 };
 
